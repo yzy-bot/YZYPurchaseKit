@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension PurchaseProductMgr {
+public extension PurchaseProductMgr {
     
     static var singlePageProductPrice: String {
         let sid  =  PurchaseProductMgr.default.onlineConfig.singleItem.id

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension PurchaseProductMgr {
+public extension PurchaseProductMgr {
     
     /// 获取ids
     static var proIds: [String] {

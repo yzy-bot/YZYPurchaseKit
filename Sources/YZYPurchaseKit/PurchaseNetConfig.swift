@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-struct PurchaseNetConfig {
+public struct PurchaseNetConfig {
     
     var launchShow: Bool = false
     var launchStyle: Int = 0

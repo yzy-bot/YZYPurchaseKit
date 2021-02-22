@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 // config
-extension PurchaseProductMgr {
+public extension PurchaseProductMgr {
     
     static func requestNetConfig() {
         if let localData =  UserDefaults.standard.data(forKey:  PurchaseDefaultValue.onlineConfigDataKey) {
