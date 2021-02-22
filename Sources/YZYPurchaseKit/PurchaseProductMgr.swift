@@ -11,14 +11,14 @@ import StoreKit
 import Alamofire
 
 public struct PurchaseDefaultValue {
-    static var purchaseSecret: String = ""
-    static var weeId = "", monId = "", yeaId = ""
-    static var configUrl: URL = URL(string: "www.apple.com")!
-    static var defaultConfigJson = ""
+    public static var purchaseSecret: String = ""
+    public static var weeId = "", monId = "", yeaId = ""
+    public static var configUrl: URL = URL(string: "www.apple.com")!
+    public static var defaultConfigJson = ""
     
-    static let receivedPricesNotification = Notification.Name("receivedPricesNotification")
-    static let purchaseProductNotification = Notification.Name("purchaseProductNotification")
-    static let receivedNetConfigNotification = Notification.Name("receivedNetConfigNotification")
+    public static let receivedPricesNotification = Notification.Name("receivedPricesNotification")
+    public static let purchaseProductNotification = Notification.Name("purchaseProductNotification")
+    public static let receivedNetConfigNotification = Notification.Name("receivedNetConfigNotification")
 
     static let lastedExpiredDateKey = "lateastExpiredDateKey"
     static let havedPurchaseOrRestoreKey = "havedPurchaseOrRestoreKey"
@@ -26,7 +26,6 @@ public struct PurchaseDefaultValue {
 }
 
 public class PurchaseProductMgr {
-    
     static let `default` = PurchaseProductMgr()
     var onlineConfig: PurchaseNetConfig = PurchaseNetConfig(onlineData: Data())
 }

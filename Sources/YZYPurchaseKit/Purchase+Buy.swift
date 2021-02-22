@@ -9,7 +9,7 @@ import Foundation
 import SwiftyStoreKit
 import StoreKit
 
-extension PurchaseProductMgr {
+public extension PurchaseProductMgr {
     static func requestItemsInfo(ids: [String]) {
         if ids.count == 0 {
             return

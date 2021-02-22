@@ -6,7 +6,7 @@ final class YZYPurchaseKitTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(YZYPurchaseKit().text, "Hello, World!")
+//        XCTAssertEqual(YZYPurchaseKit().text, "Hello, World!")
     }
 
     static var allTests = [
