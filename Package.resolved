@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit",
+        "state": {
+          "branch": null,
+          "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
+          "version": "5.0.1"
+        }
+      },
+      {
         "package": "SwiftyJSON",
         "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON.git",
         "state": {
@@ -35,6 +44,15 @@
           "branch": null,
           "revision": "3b54c8eac2840b0cdd576634e83d9ebeb70f847c",
           "version": "0.16.3"
+        }
+      },
+      {
+        "package": "ZYCommonUtil",
+        "repositoryURL": "https://github.com/githubdelegate/ZYCommonUtil",
+        "state": {
+          "branch": null,
+          "revision": "f166123f26e87ea3156dd0810c700cc1b65f0630",
+          "version": "1.1.6"
         }
       }
     ]
