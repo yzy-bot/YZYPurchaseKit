@@ -1,49 +1,50 @@
 //
-//  BuyViewController.swift
-//  photoremove
+//  File.swift
+//  
 //
-//  Created by edz on 2021/1/28.
+//  Created by zy on 2021/2/23.
 //
 
-import UIKit
+//import Foundation
+//import UIKit
 //import ZYCommonUtil
 //import Flurry_iOS_SDK
 
-extension UILabel {
-    class func label(str: String,color: UIColor, font: UIFont) -> UILabel {
-        let lbl = UILabel()
-        lbl.text = str
-        lbl.textColor = color
-        lbl.font = font
-        return lbl
-    }
-}
+//extension UILabel {
+//    class func label(str: String,color: UIColor, font: UIFont) -> UILabel {
+//        let lbl = UILabel()
+//        lbl.text = str
+//        lbl.textColor = color
+//        lbl.font = font
+//        return lbl
+//    }
+//}
 //
 //class ItemBuyViewController: CustomNavViewController {
 //
 //    var isSingle: Bool = true
 //    var singleLbl = UILabel(), singleBtn: UIButton = UIButton()
-//    
+//
 //    var weekLbl1: UILabel!, weekLbl2: UILabel!, weekLbl3: UILabel!
 //    var monthLbl1: UILabel!, monthLbl2: UILabel!, monthLbl3: UILabel!
 //    var yearLbl1: UILabel!, yearLbl2: UILabel! ,yearLbl3: UILabel!
 //    var weekBtn: UIButton!, monthBtn: UIButton!, yearBtn: UIButton!
 //    var clickBtn: UIButton!
-//    
+//
 //    var continueBtn: UIButton!, restoreBtn: UIButton!
 //    let scrollView = UIScrollView()
-//    
+//
 //    var pageFrom: BuyPageFromSource = .unknow
-//    
+//
 //    var buyT: Timer!
 //    var restoreT: Timer!
-//    
+//
 //    deinit {
 //        if buyT != nil {
 //            buyT.invalidate()
 //            buyT = nil
 //        }
-//        
+//
 //        if restoreT != nil {
 //            restoreT.invalidate()
 //            restoreT = nil
@@ -51,16 +52,16 @@ extension UILabel {
 //        NotificationCenter.default.removeObserver(self)
 //        print("xxxx-BuyViewController init")
 //    }
-//    
+//
 //    override func clickNavBar(type: Int) {
 //        if type == 1 {
 //            self.restore()
 //        }
 //    }
-//    
+//
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
-//        
+//
 //        self.view.backgroundColor = UIColor(hexString: "#f2fbff")
 //        self.navView?.backgroundColor = .clear
 //        self.navView?.backBtn.setImage(UIImage(named: "设置_订阅_关闭_icon"), for: .normal)
@@ -72,7 +73,7 @@ extension UILabel {
 //        scrollView.snp.makeConstraints { (make) in
 //            make.left.bottom.top.right.equalToSuperview()
 //        }
-//        
+//
 //        if isSingle {
 //            scrollView.contentSize = CGSize(width: 0, height: 730)
 //        } else {
@@ -94,11 +95,11 @@ extension UILabel {
 //            self.clickBtn = weekBtn
 //            self.clickBtn.layer.borderWidth = 1
 //            self.clickBtn.layer.borderColor = UIColor(hexString: "#306CFF").cgColor
-//            
+//
 ////            self.weekBtn.sendActions(for: .touchUpInside)
 //             updateItemsInfo()
 //        }
-//        
+//
 //        NotificationCenter.default.addObserver(forName: BuyMgr.BuyDefaultValue.productPriceNotification, object: nil, queue: nil) { [weak self] (n) in
 //            if self?.isSingle == true {
 //                self?.updateSingleItem()
@@ -106,7 +107,7 @@ extension UILabel {
 //                self?.updateItemsInfo()
 //            }
 //        }
-//        
+//
 //        Flurry.logEvent("subscribe_show", withParameters: ["page": self.pageParam, "source": self.pageFrom.souParam])
 //    }
 //

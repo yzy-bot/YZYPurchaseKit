@@ -1,8 +1,8 @@
 //
-//  BuyMgr.swift
-//  photoremove
+//  File.swift
+//  
 //
-//  Created by edz on 2021/2/2.
+//  Created by zy on 2021/2/23.
 //
 
 import Foundation
@@ -11,13 +11,29 @@ import StoreKit
 import Alamofire
 
 public struct PurchaseDefaultValue {
+    
+    
+    /// 订阅解码密钥
     public static var purchaseSecret: String = ""
+    
+    /// 商品id
     public static var weeId = "", monId = "", yeaId = ""
+    
+    /// 线上配置
     public static var configUrl: URL = URL(string: "www.apple.com")!
+    
+    /// 默认线上配置
     public static var defaultConfigJson = ""
     
+    
+    /// 获取到商品价格通知
     public static let receivedPricesNotification = Notification.Name("receivedPricesNotification")
+    
+    /// 订阅成功，或者订阅过期通知
     public static let purchaseProductNotification = Notification.Name("purchaseProductNotification")
+    
+    
+    /// 获取到线上配置信息通知
     public static let receivedNetConfigNotification = Notification.Name("receivedNetConfigNotification")
 
     static let lastedExpiredDateKey = "lateastExpiredDateKey"
@@ -29,7 +45,6 @@ public class PurchaseProductMgr {
     static let `default` = PurchaseProductMgr()
     var onlineConfig: PurchaseNetConfig = PurchaseNetConfig(onlineData: Data())
 }
-
 
 // info
 extension PurchaseProductMgr {
@@ -49,27 +64,6 @@ extension PurchaseProductMgr {
 //            }
 //        }
 //    }
-    
-    enum ShowBuyPage {
-        case ocr, location, photo, video, launch, forground
-    }
-    
-    
-    static func useOcr() {
-        UserDefaults.standard.setValue(true, forKey: "has_use_ocr")
-    }
-    
-    static var hasUseOCR: Bool {
-        return UserDefaults.standard.bool(forKey: "has_use_ocr")
-    }
-    
-    static func useRemoveLocation() {
-        UserDefaults.standard.setValue(true, forKey: "has_remove_location")
-    }
-    
-    static var hasRemoveLocation: Bool {
-        return UserDefaults.standard.bool(forKey: "has_remove_location")
-    }
     
 //    static func canShowBuy(page: ShowBuyPage) -> Bool {
 //        if PurchaseProductMgr.isVip {

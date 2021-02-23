@@ -1,8 +1,8 @@
 //
-//  BuyModel.swift
-//  photoremove
+//  File.swift
+//  
 //
-//  Created by edz on 2021/2/3.
+//  Created by zy on 2021/2/23.
 //
 
 import Foundation
@@ -14,8 +14,8 @@ public struct PurchaseNetConfig {
     var launchStyle: Int = 0
     var foregroundShow: Bool = false
     
-    var singleItem = BuyItemModel(id: PurchaseDefaultValue.weeId)
-    var mutliItems = [BuyItemModel(id: PurchaseDefaultValue.weeId),BuyItemModel(id: PurchaseDefaultValue.monId),BuyItemModel(id: PurchaseDefaultValue.yeaId)]
+    var singleItem = SubItemModel(id: PurchaseDefaultValue.weeId)
+    var mutliItems = [SubItemModel(id: PurchaseDefaultValue.weeId),SubItemModel(id: PurchaseDefaultValue.monId),SubItemModel(id: PurchaseDefaultValue.yeaId)]
     
     init(onlineData: Data) {
         if let json =  try? JSON(data: onlineData) {
@@ -31,7 +31,7 @@ public struct PurchaseNetConfig {
                 self.foregroundShow = foregroundShow
             }
             
-            var singleM = BuyItemModel()
+            var singleM = SubItemModel()
             if let singleid = json["singleProduct"]["id"].string {
                 singleM.id = singleid
             }
@@ -39,7 +39,7 @@ public struct PurchaseNetConfig {
             self.singleItem = singleM
             
             let mults = json["mutliProducts"].arrayValue.map {
-                return BuyItemModel(id: $0["id"].stringValue)
+                return SubItemModel(id: $0["id"].stringValue)
             }
             self.mutliItems = mults
         }
@@ -54,6 +54,6 @@ public struct PurchaseNetConfig {
     }
 }
 
-struct BuyItemModel {
+struct SubItemModel {
     var id: String = ""
 }

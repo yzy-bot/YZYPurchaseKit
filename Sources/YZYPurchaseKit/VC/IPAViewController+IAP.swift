@@ -1,10 +1,10 @@
-////
-////  BuyViewController+IAP.swift
-////  photoremove
-////
-////  Created by edz on 2021/2/4.
-////
 //
+//  File.swift
+//  
+//
+//  Created by zy on 2021/2/23.
+//
+
 //import Foundation
 //import MBProgressHUD
 //import Flurry_iOS_SDK
@@ -13,7 +13,7 @@
 //extension ItemBuyViewController {
 //    func restore() {
 //        MBProgressHUD.show("")
-//        
+//
 //        if SKPaymentQueue.default().transactions.isEmpty {
 //            proceeRestore()
 //        } else {
@@ -30,7 +30,7 @@
 //            })
 //        }
 //    }
-//    
+//
 //    func proceeRestore() {
 //        ItemBuyProcessMgr.retore {  [weak self] (res, err)  in
 //            DispatchQueue.main.async {
@@ -48,22 +48,22 @@
 //            }
 //        }
 //    }
-//    
+//
 //    @objc func buyBtnClick(btn: UIButton) {
 //        MBProgressHUD.show("")
 //        if btn == self.singleBtn {
-//            
+//
 //        } else {
 //            self.clickBtn.isSelected = false
 //            self.clickBtn.layer.borderWidth = 0
 //            btn.isSelected = true
 //            self.clickBtn = btn
-//            
+//
 //            btn.layer.borderWidth = 1
 //            btn.layer.borderColor = UIColor(hexString: "#306CFF").cgColor
 //        }
-//        
-//        
+//
+//
 //        if SKPaymentQueue.default().transactions.isEmpty {
 //            processBuy(btn: btn)
 //        } else {
@@ -80,9 +80,9 @@
 //            })
 //        }
 //    }
-//    
+//
 //    func processBuy(btn: UIButton) {
-//        
+//
 //        var pid = ""
 //        if btn == self.singleBtn {
 //            pid = ItemBuyProcessMgr.singleProId
@@ -99,7 +99,7 @@
 //            }
 //            return
 //        }
-//        
+//
 //        if btn == weekBtn {
 //            pid = ItemBuyProcessMgr.BuyItemType.week.itemId
 //            ItemBuyProcessMgr.buy(id: ItemBuyProcessMgr.BuyItemType.week.itemId) { [weak self] (p, err) in
@@ -127,7 +127,7 @@
 //                }
 //            }
 //        }
-//        
+//
 //        if ItemBuyProcessMgr.weekPrice == "--" {
 //            Flurry.logEvent("product_status", withParameters: ["page": self.pageParam, "result": "fail"])
 //        } else {
