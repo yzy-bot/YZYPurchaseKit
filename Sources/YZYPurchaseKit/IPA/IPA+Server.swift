@@ -55,7 +55,6 @@ extension PurchaseProductMgr {
             }
         }
     }
-    
 }
 
 struct ValidatePara: Encodable {

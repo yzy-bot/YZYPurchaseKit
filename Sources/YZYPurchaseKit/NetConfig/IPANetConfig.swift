@@ -13,6 +13,7 @@ public struct PurchaseNetConfig {
     var launchShow: Bool = false
     var launchStyle: Int = 0
     var foregroundShow: Bool = false
+    var maxCount: Int = 5
     
     var singleItem = SubItemModel(id: PurchaseDefaultValue.weeId)
     var mutliItems = [SubItemModel(id: PurchaseDefaultValue.weeId),SubItemModel(id: PurchaseDefaultValue.monId),SubItemModel(id: PurchaseDefaultValue.yeaId)]
@@ -25,6 +26,10 @@ public struct PurchaseNetConfig {
             
             if let launchStyle = json["launchStyle"].int {
                 self.launchStyle = launchStyle
+            }
+            
+            if let maxCount = json["maxCount"].int {
+                self.maxCount = maxCount
             }
             
             if let foregroundShow = json["foregroundShow"].bool {
