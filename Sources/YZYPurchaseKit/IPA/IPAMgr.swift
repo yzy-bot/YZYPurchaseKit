@@ -27,9 +27,11 @@ public struct PurchaseDefaultValue {
     
     /// 是否使用服务器校验
     public static var useServerValid: Bool = false
+    public static var validServerUrl: String = ""
     public static var appsflyerId: String = ""
     public static var idfa: String = ""
     public static var pkg: String = ""
+    
     
     /// 获取到商品价格通知
     public static let receivedPricesNotification = Notification.Name("receivedPricesNotification")

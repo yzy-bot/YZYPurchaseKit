@@ -23,7 +23,7 @@ public extension PurchaseProductMgr {
                 PurchaseProductMgr.requestConfig()
                 PurchaseProductMgr.requestItemsInfo(ids: self.proIds)
                 if PurchaseProductMgr.isEverPurchased {
-                    PurchaseProductMgr.valid(fromRestore: true) { _, purchase, id in
+                    PurchaseProductMgr.checkValidate(fromRestore: true) { _, purchase, id in
 //                        print("xxx")
                     }
                 }
