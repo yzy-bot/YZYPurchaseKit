@@ -25,6 +25,11 @@ public struct PurchaseDefaultValue {
     /// 默认线上配置
     public static var defaultConfigJson = ""
     
+    /// 是否使用服务器校验
+    public static var useServerValid: Bool = false
+    public static var appsflyerId: String = ""
+    public static var idfa: String = ""
+    public static var pkg: String = ""
     
     /// 获取到商品价格通知
     public static let receivedPricesNotification = Notification.Name("receivedPricesNotification")
@@ -43,6 +48,9 @@ public struct PurchaseDefaultValue {
 
 public class PurchaseProductMgr {
     static let `default` = PurchaseProductMgr()
+    
+    
+    
     var onlineConfig: PurchaseNetConfig = PurchaseNetConfig(onlineData: Data())
 }
 
