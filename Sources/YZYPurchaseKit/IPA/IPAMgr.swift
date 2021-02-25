@@ -50,8 +50,7 @@ public struct PurchaseDefaultValue {
 public class PurchaseProductMgr {
     public static let `default` = PurchaseProductMgr()
     
-    
-    var onlineConfig: PurchaseNetConfig = PurchaseNetConfig(onlineData: Data())
+    public var onlineConfig: PurchaseNetConfig = PurchaseNetConfig.defaultConfig()
 }
 
 // info
