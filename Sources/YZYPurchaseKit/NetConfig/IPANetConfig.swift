@@ -10,13 +10,13 @@ import SwiftyJSON
 
 public struct PurchaseNetConfig {
     
-    var launchShow: Bool = false
-    var launchStyle: Int = 0
-    var foregroundShow: Bool = false
-    var maxCount: Int = 5
+    public  var launchShow: Bool = false
+    public  var launchStyle: Int = 0
+    public var foregroundShow: Bool = false
+    public var maxCount: Int = 5
     
-    var singleItem = SubItemModel(id: PurchaseDefaultValue.weeId)
-    var mutliItems = [SubItemModel(id: PurchaseDefaultValue.weeId),SubItemModel(id: PurchaseDefaultValue.monId),SubItemModel(id: PurchaseDefaultValue.yeaId)]
+    public var singleItem = SubItemModel(id: PurchaseDefaultValue.weeId)
+    public var mutliItems = [SubItemModel(id: PurchaseDefaultValue.weeId),SubItemModel(id: PurchaseDefaultValue.monId),SubItemModel(id: PurchaseDefaultValue.yeaId)]
     
     init(onlineData: Data) {
         if let json =  try? JSON(data: onlineData) {
@@ -59,6 +59,6 @@ public struct PurchaseNetConfig {
     }
 }
 
-struct SubItemModel {
-    var id: String = ""
+public struct SubItemModel {
+    public var id: String = ""
 }
