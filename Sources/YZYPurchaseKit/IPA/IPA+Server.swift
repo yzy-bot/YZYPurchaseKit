@@ -66,22 +66,26 @@ struct ValidatePara: Encodable {
 
 struct ValidateResponse: Codable {
     struct Result: Codable {
-        var cleaner_week_premium: TimeInterval?
-        var cleaner_month_premium: TimeInterval?
-        var cleaner_year_premium: TimeInterval?
+        var lightning_week_premium: TimeInterval?
+        var lightning_month_premium: TimeInterval?
+        var lightning_year_premium: TimeInterval?
+        
+//        var week_time: TimeInterval?
+//        var month_time: TimeInterval?
+//        var year_time: TimeInterval?
 
         var subString: String {
             var s = ""
-            if cleaner_week_premium != nil {
-                s = s + "周到期" + Date(timeIntervalSince1970: cleaner_week_premium! / 1000).secondsString
+            if lightning_week_premium != nil {
+                s = s + "周到期" + Date(timeIntervalSince1970: lightning_week_premium! / 1000).secondsString
             }
 
-            if cleaner_month_premium != nil {
-                s = s + "月到期" + Date(timeIntervalSince1970: cleaner_month_premium! / 1000).secondsString
+            if lightning_month_premium != nil {
+                s = s + "月到期" + Date(timeIntervalSince1970: lightning_month_premium! / 1000).secondsString
             }
 
-            if cleaner_year_premium != nil {
-                s = s + "年到期" + Date(timeIntervalSince1970: cleaner_year_premium! / 1000).secondsString
+            if lightning_year_premium != nil {
+                s = s + "年到期" + Date(timeIntervalSince1970: lightning_year_premium! / 1000).secondsString
             }
             return s
         }
@@ -91,16 +95,16 @@ struct ValidateResponse: Codable {
         func getLatest() -> (String, Date) {
             var idTimes: [String: TimeInterval] = [:]
 
-            if cleaner_week_premium != nil {
-                idTimes[PurchaseDefaultValue.weeId] = cleaner_week_premium
+            if lightning_week_premium != nil {
+                idTimes[PurchaseDefaultValue.weeId] = lightning_week_premium
             }
 
-            if cleaner_month_premium != nil {
-                idTimes[PurchaseDefaultValue.monId] = cleaner_month_premium
+            if lightning_month_premium != nil {
+                idTimes[PurchaseDefaultValue.monId] = lightning_month_premium
             }
 
-            if cleaner_year_premium != nil {
-                idTimes[PurchaseDefaultValue.yeaId] = cleaner_year_premium
+            if lightning_year_premium != nil {
+                idTimes[PurchaseDefaultValue.yeaId] = lightning_year_premium
             }
 
             var t: TimeInterval = 0

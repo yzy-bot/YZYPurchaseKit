@@ -47,4 +47,19 @@
 
 
 
+```
+/// 获取到商品价格通知
+public static let receivedPricesNotification = Notification.Name("receivedPricesNotification")
+
+/// 订阅成功，或者订阅过期通知
+public static let purchaseProductNotification = Notification.Name("purchaseProductNotification")
+
+
+/// 获取到线上配置信息通知
+public static let receivedNetConfigNotification = Notification.Name("receivedNetConfigNotification")
+
+```
+
+可以通过上面三个通知 来及时更新界面信息
+
 
