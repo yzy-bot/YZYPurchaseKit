@@ -12,7 +12,6 @@ import Alamofire
 
 public struct PurchaseDefaultValue {
     
-    
     /// 订阅解码密钥
     public static var purchaseSecret: String = ""
     
@@ -49,8 +48,7 @@ public struct PurchaseDefaultValue {
 }
 
 public class PurchaseProductMgr {
-    static let `default` = PurchaseProductMgr()
-    
+    public static let `default` = PurchaseProductMgr()
     
     
     var onlineConfig: PurchaseNetConfig = PurchaseNetConfig(onlineData: Data())
